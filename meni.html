@@ -5,17 +5,18 @@
     <title>Meni Plan</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Stylesheets -->
-        <!-- Latest compiled and minified CSS -->
+    <!-- stylesheets -->
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="./based.css" rel="stylesheet">
-    <link href="jquery-ui.css" rel="stylesheet">
+    <link href="css/based.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
     <!-- latest jQuery -->
     <script src="js/jquery.js"></script>
     <script src="js/jquery-ui.js"></script>
 </head>
 
 <body>
+    <!-- navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -43,29 +44,111 @@
         </div><!-- /.container-fluid -->
     </nav>
     <h1>Odaberi meni</h1>
-    <form autocomplete="off" action="/action_page.php">
-        <div class="autocomplete" style="width:300px;">
-            <input id="autocomplete" type="text" name="myCountry" placeholder="Country">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-6">
+                <div style="margin-top: 40px; display:flex;">
+                    <input class="form-control inputcustom" id="autocomplete">
+                    <div class="appendbutton">
+                        <button class="btn buttoncustom" onclick="wipeinput()"><span class="glyphicon glyphicon-remove-circle"></span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-6">
+                <table class="table table-responsive" id="stol">
+                    <thead>
+                        <tr>
+                            <th>Kolegij</th>
+                            <th>ECTS</th>
+                            <th>Sati</th>
+                            <th>P</th>
+                            <th>V</th>
+                            <th>Tip</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Ukupno:</th>
+                            <th id="ukupno-ects"></th>
+                            <th id="ukupno-sati"></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <input type="submit">
-    </form>
+    </div>
     <script>
-    let url = 'http://www.fulek.com/VUA/SUPIT/GetNastavniPlan';
-    var jsondata = []
-    var kolegiji = []
+    let planurl = 'http://www.fulek.com/VUA/SUPIT/GetNastavniPlan';
+    let kolegijurl = 'http://www.fulek.com/VUA/supit/GetKolegij/';
+    var jsondata = [];
+    var kolegiji = [];
+    var tabledata = [];
+
+    function wipeinput() {
+        $("#autocomplete").val("");
+    }
+
+    function sum_data(tabledata) {
+        var ects = 0;
+        var sati = 0;
+        for (var i = 0; i < tabledata.length; i++) {
+            console.log('i:', i);
+            console.log('tabledata[i]:', tabledata[i]);
+            console.log('tabledata:', tabledata);
+            ects += parseInt($("#" + tabledata[i] + " td:nth-child(2)").html());
+            sati += parseInt($("#" + tabledata[i] + " td:nth-child(3)").html());
+        }
+        if (ects == 0 && sati == 0) {
+            $("#ukupno-ects").html("");
+            $("#ukupno-sati").html("");
+            return null
+        }
+        $("#ukupno-ects").html(ects);
+        $("#ukupno-sati").html(sati);
+    }
+
+    function removeButton(buttonId) {
+        let popbut = tabledata.splice(tabledata.indexOf(buttonId), 1);
+        kolegiji.push(jsondata.find(x => x.value == buttonId).label)
+        $("#autocomplete").autocomplete({ source: kolegiji });
+        $(`#${buttonId}`).remove();
+        sum_data(tabledata);
+    }
 
     // fetch data from url
-    fetch(url)
+    fetch(planurl)
         .then(res => res.json())
         .then((out) => {
             jsondata = out;
-            jsondata.forEach(x => kolegiji.push(x.label))
-            console.log('Checkout this JSON! ', out);
+            jsondata.forEach(x => kolegiji.push(x.label));
+            $("#autocomplete").autocomplete({
+                source: kolegiji
+            });
+            $("#autocomplete").on("autocompleteclose", function(event, ui) {
+                let key = $("#autocomplete").val();
+                let result = jsondata.find(x => x.label == key)?.value;
+                if (typeof result !== 'undefined') {
+                    fetch(kolegijurl + result)
+                        .then(res => res.json())
+                        .then((out) => {
+                            tabledata.push(out.id);
+                            let popid = kolegiji.splice(kolegiji.indexOf(jsondata.find(x => x.value == out.id).label), 1)
+                            $("#autocomplete").autocomplete({ source: kolegiji });
+                            $('#stol tr:last').before(`<tr id="${out.id}"><td style="padding-top: 9px; padding-bottom: 9px;">${out.kolegij}</td><td class="ects">${out.ects}</td><td class="sati">${out.sati}</td><td>${out.predavanja}</td><td>${out.vjezbe}</td><td>${out.tip}</td><td style="padding: 1px; padding-top: 2px;"><button class="btn btn-default button" onclick="removeButton(${out.id})"><span class="glyphicon glyphicon-trash"></span></button></td></tr>`);
+                            sum_data(tabledata);
+                        })
+                        .catch(err => { throw err; });
+                }
+            });
+            console.log('GET got: ', out);
         })
         .catch(err => { throw err });
-
     // text autocomplete function
-    autocomplete(document.getElementById("autocomplete"), kolegiji)
     </script>
 </body>
 

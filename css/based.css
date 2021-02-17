@@ -1,9 +1,55 @@
-body { padding-top: 50px; }
+body {
+    padding-top: 50px;
+}
 
 #background {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.button:hover {
+    background-color: #d13638;
+    color: #fff;
+    border-color: #d43f3a;
+}
+
+.red {
+    color: #d13638;
+}
+
+.padding-custom {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.appendbutton {
+    display: flex;
+}
+
+.inputcustom {
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-right-width: 0px;
+}
+
+.buttoncustom {
+    color: #6c757d;
+    background-color: transparent;
+    background-image: none;
+    border-color: #6c757d;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.buttoncustom:hover {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.buttoncustom:focus {
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
 }
