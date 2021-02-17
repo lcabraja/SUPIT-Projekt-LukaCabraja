@@ -15,7 +15,7 @@
     <script src="js/jquery-ui.js"></script>
 </head>
 
-<body>
+<body class="backgroundimage">
     <!-- navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -27,7 +27,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img style="max-height: 23px;padding: 0px; position: centered" alt="Algebra Logo" src="./img/Algebra-logo.png"></a>
+                <a class="navbar-brand" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img style="max-height: 23px;padding: 0px; position: centered" alt="Algebra Logo" src="./img/algebra/Algebra-logo.png"></a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
@@ -35,7 +35,7 @@
                     <li><a href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> O Nama</a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Novosti</a></li>
                     <li class="active"><a href="#"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> Meni Plan<span class="sr-only">(current)</span></a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Kontakt</a></li>
+                    <li><a href="./kontakt.html"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Kontakt</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Link</a></li>
@@ -43,8 +43,9 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-    <h1>Odaberi meni</h1>
     <div class="container-fluid">
+        <h1 class="text-center">Odaberi meni</h1>
+        <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-lg-6">
                 <div style="margin-top: 40px; display:flex;">
@@ -54,8 +55,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-lg-6">
-                <table class="table table-responsive" id="stol">
+            <div class="col-xs-12 col-sm-6 col-lg-6 colspace">
+                <table class="table table-striped" id="stol">
                     <thead>
                         <tr>
                             <th>Kolegij</th>
@@ -68,18 +69,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th>Ukupno:</th>
-                            <th id="ukupno-ects"></th>
-                            <th id="ukupno-sati"></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                        <tr style="background-color: #fff">
+                            <th class="borderline">Ukupno:</th>
+                            <th class="borderline red b" id="ukupno-ects"></th>
+                            <th class="borderline red b" id="ukupno-sati"></th>
+                            <th class="borderline"></th>
+                            <th class="borderline"></th>
+                            <th class="borderline"></th>
+                            <th class="borderline"></th>
                         </tr>
                     </tbody>
                 </table>
             </div>
+        </div>
         </div>
     </div>
     <script>
@@ -145,7 +147,7 @@
                         .catch(err => { throw err; });
                 }
             });
-            console.log('GET got: ', out);
+            //console.log('GET got: ', out);
         })
         .catch(err => { throw err });
     // text autocomplete function

@@ -1,3 +1,9 @@
+
+/* 
+ * red: #d13638;
+ * softred: #f4c3c4;
+ */
+
 body {
     padding-top: 50px;
 }
@@ -52,4 +58,41 @@ body {
 
 .buttoncustom:focus {
     box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+}
+
+@media (max-width: 768px) {
+	.colspace {
+		padding-top: 50px;
+	}
+}
+
+.table-pruge>tbody>tr:nth-of-type(odd) {
+    background-color: #f4c3c4;
+}
+.table-pruge>tbody>tr:last {
+	background-color: #f9f9f9;
+}
+
+.borderline {
+	border-top-width: 2px !important;
+	border-top: solid !important;
+	border-top-color: #d13638 !important;
+}
+
+.image {
+	position: absolute;
+		left: 0;
+		right: 0;
+	height: 1000px;
+	background-image: url('./img/mekpers/zloburger.jpeg');
+}
+
+.shadow {
+	box-shadow: 0 4px 4px -2px #000000;
+}
+
+.backgroundimage {
+	background-image: url('./img/wave.png')
+	background-position: left bottom;
+	background-repeat: repeat-y;
 }
