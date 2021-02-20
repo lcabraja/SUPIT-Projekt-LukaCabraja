@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Kontakt</title>
+    <title>Početna Stranica</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- stylesheets -->
@@ -10,15 +10,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/based.css" rel="stylesheet">
     <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
     <!-- latest jQuery -->
     <script src="js/jquery.js"></script>
     <script src="js/jquery-ui.js"></script>
 </head>
 
 <body class="backgroundimage">
-     <video autoplay muted loop id="background">
-        <source src="./video/background0.mp4" type="video/mp4">
-    </video>
     <!-- navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -35,11 +34,11 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="./index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Početna Stranica</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> O Nama</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Novosti</a></li>
+                    <li class="active"><a href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> O Nama</a></li>
+                    <li><a href="./novosti.html"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Novosti</a></li>
                     <li><a href="./meni.html"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> Meni Plan</a></li>
-                    <li>
-                        <button id="dialog-link" class="nav-pills" style="padding: 15px; border: hidden;">
+                    <li class="custombutton2">
+                        <button id="dialog-link" class="nav-pills custombutton2" style="padding: 15px; border: hidden;">
                             <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Kontakt
                         </button>
                     </li>
@@ -56,11 +55,11 @@
                         </div>
                         <div class="input-group">
                             <label class="input-group-addon">Name </label>
-                            <input class="form-control" id="name" name="name" class="">
+                            <input class="form-control" id="name" name="name" class="" required>
                         </div>
                         <div class="input-group pts">
                             <label class="input-group-addon">Email </label>
-                            <input class="form-control" id="email" name="email" class="">
+                            <input class="form-control" id="email" name="email" class="" required>
                         </div>
                         <div class="form-group pts" style="margin-bottom: 0px;">
                             <select form="kontaktform" name="importance">
@@ -72,12 +71,12 @@
                             </select>
                         </div>
                         <div class="form-group pts" style="margin-bottom: 0px;">
-                                <label for="newsletter" class="p0">Burger </label>
-                                <input id="newsletter" name="newsletter" type="checkbox" class="p0">
+                            <label for="newsletter" class="p0">Burger </label>
+                            <input id="newsletter" name="newsletter" type="checkbox" class="p0">
                         </div>
                         <div class="form-group pts">
                             <label class="" for="message">Message </label>
-                            <textarea form="kontaktform" id="message" name="message" class="form-control" placeholder="Tell us how much you love our burgers."></textarea>
+                            <textarea form="kontaktform" id="message" name="message" class="form-control" placeholder="Tell us how much you love our burgers." required></textarea>
                         </div>
                         <div class="form-group">
                             <input id="submit" class="btn custombutton" type="submit">
@@ -87,27 +86,28 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-    <div class="container ptl">
-        
+    <div class="container-fluid backgroundwhite">
+    	<p>Hello There</p>
     </div>
+    <!-- popup form -->
     <script>
-    $("#dialog").dialog({
-        autoOpen: false,
-        width: 400,
-        buttons: [{
-            text: "Cancel",
-            style: "display: inline-block;padding: 6px 12px;margin-bottom: 0;font-size: 14px;font-weight: 400;line-height: 1.42857143;text-align: center;white-space: nowrap;vertical-align: middle;-ms-touch-action: manipulation;touch-action: manipulation;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;background-image: none;border: 1px solid transparent;border-radius: 4px;",
-            click: function() {
-                $(this).dialog("close");
-            }
-        }]
-    });
+	    $("#dialog").dialog({
+	        autoOpen: false,
+	        width: 400,
+	        buttons: [{
+	            text: "Cancel",
+	            style: "display: inline-block;padding: 6px 12px;margin-bottom: 0;font-size: 14px;font-weight: 400;line-height: 1.42857143;text-align: center;white-space: nowrap;vertical-align: middle;-ms-touch-action: manipulation;touch-action: manipulation;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;background-image: none;border: 1px solid transparent;border-radius: 4px;",
+	            click: function() {
+	                $(this).dialog("close");
+	            }
+	        }]
+	    });
 
-    // Link to open the dialog
-    $("#dialog-link").click(function(event) {
-        $("#dialog").dialog("open");
-        event.preventDefault();
-    });
+	    // Link to open the dialog
+	    $("#dialog-link").click(function(event) {
+	        $("#dialog").dialog("open");
+	        event.preventDefault();
+	    });
     </script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
