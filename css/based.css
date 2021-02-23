@@ -87,6 +87,11 @@ body {
     background-color: #fff;
 }
 
+.navback {
+    background-image: url('../images/nav.png');
+    background-repeat: all;
+}
+
 .backgroundimage {
     background-image: url('../images/burger.png');
     background-repeat: repeat;
@@ -177,4 +182,8 @@ textarea {
         margin-left: 0%;
         width: 100%;
     }
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
 }
