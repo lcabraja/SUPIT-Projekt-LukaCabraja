@@ -1,3 +1,11 @@
+nav {
+    opacity: 100% !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* 
  * red: #d13638;
  * softred: #f4c3c4;
@@ -8,11 +16,46 @@ body {
 }
 
 #background {
+    overflow: hidden;
     position: fixed;
+    top: 0;
     right: 0;
     bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    left: 0;
+}
+
+#background>video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 1. No object-fit support: */
+@media (min-aspect-ratio: 16/9) {
+    #background>video {
+        height: 300%;
+        top: -100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #background>video {
+        width: 300%;
+        left: -100%;
+    }
+}
+
+/* 2. If supporting object-fit, overriding (1): */
+@supports (object-fit: cover) {
+    #background>video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 .button:hover {
@@ -87,22 +130,37 @@ body {
     background-color: #fff;
 }
 
+.backgroundgrey {
+    background-color: rgb(249, 249, 249);
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
 .navback {
     background-image: url('../images/nav.png');
     background-repeat: all;
 }
 
+/*
 .backgroundimage {
-    background-image: url('../images/burger.png');
     background-repeat: repeat;
     /*    background-image: url('images/wave.png')
     background-repeat: repeat-y; */
-    /*background-image: url('../images/pocetna.gif');
+/*background-image: url('../images/pocetna.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: bottom;
     background-size: max(1920px);*/
+}
+
+.ps {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.ptxl {
+    padding-top: 100px;
 }
 
 .ptl {
@@ -166,6 +224,21 @@ textarea {
     resize: vertical;
 }
 
+.opacity {
+    animation-duration: 2.35s;
+    animation-name: opacityin;
+}
+
+@keyframes opacityin {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
 .animatein {
     /*animation: 3s ease-in 1s 2 reverse both paused slidein;*/
     animation-duration: 2.35s;
@@ -184,6 +257,123 @@ textarea {
     }
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     text-align: center;
+}
+
+h2 {
+    padding-top: 75px;
+    padding-bottom: 25px;
+    margin: 0px;
+}
+
+/*
+.body > div.container > div.row:nth-of-type(odd) {
+    background-color: #f4c3c4;
+}
+
+body > div.container > div.row:nth-of-type(even) {
+    background-color: #fff;
+}
+*/
+
+.blackborder {
+    border-color: #4f4f4f;
+    /*height: 35vh;*/
+}
+
+/*
+div.panel.blackaborder > div.panel-heading {
+    border-bottom-width: 1px;
+    border-bottom-color: #4f4f4f;
+    border-bottom-style: solid;
+    background-color: rgb(249, 249, 249);
+}*/
+
+.blue {
+    color: rgb(46, 112, 171);
+}
+
+.mh {
+    max-height: 75px;
+}
+
+.nb {
+    border: none;
+}
+
+.tl {
+    text-align: left;
+}
+
+.customtext {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: Ballet, serif;
+    font-size: 2.5rem;
+}
+
+.underline {
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    border-bottom-color: gold;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+}
+
+.maps {
+    background-image: url('../images/algebra/kakoDoNas.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode:
+}
+
+.mapsoverlay {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+#topimage {
+    max-height: 350px;
+    min-width: 100%;
+    background-image: url('../images/algebra/kampus-iz-zraka-min-1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode:
+}
+
+.videocontainer {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.h1h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.background {
+    position: absolute;
+    z-index: -1;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 350px;
+    max-height: 350px;
+    min-width: 100%;
+    background-image: url('../images/algebra/zaiskri-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode:
 }

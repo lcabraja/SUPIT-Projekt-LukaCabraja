@@ -43,15 +43,12 @@
                         </button>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
-                </ul>
                 <!-- dialog div -->
                 <div id="dialog" title="Kontaktirajte nas">
                     <form id="kontaktform" action="http://www.fulek.com/VUA/SUPIT/ContactUs">
                         <div class="form-group">
-                            <h2>Data Burger</h2>
-                            <p>Give us your data, we give you a slightly discounted burger.</p>
+                            <h2>Kontakt Obrazac</h2>
+                            <p>Kontaktirajte nas popunjavanjem obrazca</p>
                         </div>
                         <div class="input-group">
                             <label class="input-group-addon">Name </label>
@@ -71,12 +68,12 @@
                             </select>
                         </div>
                         <div class="form-group pts" style="margin-bottom: 0px;">
-                                <label for="newsletter" class="p0">Burger </label>
-                                <input id="newsletter" name="newsletter" type="checkbox" class="p0">
+                            <label for="newsletter" class="p0">Newsletter </label>
+                            <input id="newsletter" name="newsletter" type="checkbox" class="p0">
                         </div>
                         <div class="form-group pts">
                             <label class="" for="message">Message </label>
-                            <textarea form="kontaktform" id="message" name="message" class="form-control" placeholder="Tell us how much you love our burgers." required></textarea>
+                            <textarea form="kontaktform" id="message" name="message" class="form-control" placeholder="Pišite poruku ovdje" required></textarea>
                         </div>
                         <div class="form-group">
                             <input id="submit" class="btn custombutton" type="submit">
@@ -87,45 +84,51 @@
         </div><!-- /.container-fluid -->
     </nav>
     <div class="container-fluid backgroundwhite">
-        <h1 class="text-center animatein">Odaberi Kolegij</h1>
-        <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-lg-6">
-                <div style="margin-top: 40px; display:flex;">
-                    <input class="form-control inputcustom" id="autocomplete">
-                    <div class="appendbutton">
-                        <button class="btn buttoncustom" onclick="wipeinput()"><span class="glyphicon glyphicon-remove-circle"></span></button>
+        <div class="underline opacity text-center">
+                    <h1 class="animatein">
+                        Odaberi Kolegij
+                    </h1>
+                </div>
+        <div class="container-fluid  ptxl">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-lg-6">
+                    <div style="margin-top: 40px; display:flex;">
+                        <input class="form-control inputcustom" id="autocomplete">
+                        <div class="appendbutton">
+                            <button class="btn buttoncustom" onclick="wipeinput()"><span class="glyphicon glyphicon-remove-circle"></span></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-lg-6 colspace">
-                <table class="table table-striped" id="stol">
-                    <thead>
-                        <tr>
-                            <th>Kolegij</th>
-                            <th>ECTS</th>
-                            <th>Sati</th>
-                            <th>P</th>
-                            <th>V</th>
-                            <th>Tip</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="background-color: #fff">
-                            <th class="borderline">Ukupno:</th>
-                            <th class="borderline red b" id="ukupno-ects"></th>
-                            <th class="borderline red b" id="ukupno-sati"></th>
-                            <th class="borderline"></th>
-                            <th class="borderline"></th>
-                            <th class="borderline"></th>
-                            <th class="borderline"></th>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="col-xs-12 col-sm-6 col-lg-6 colspace">
+                    <table class="table table-striped" id="stol">
+                        <thead>
+                            <tr>
+                                <th>Kolegij</th>
+                                <th>ECTS</th>
+                                <th>Sati</th>
+                                <th>P</th>
+                                <th>V</th>
+                                <th>Tip</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background-color: #fff">
+                                <th class="borderline">Ukupno:</th>
+                                <th class="borderline red b" id="ukupno-ects"></th>
+                                <th class="borderline red b" id="ukupno-sati"></th>
+                                <th class="borderline"></th>
+                                <th class="borderline"></th>
+                                <th class="borderline"></th>
+                                <th class="borderline"></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-        </div>
+    </div>
+    <div id="backgrounddiv" class="background">
     </div>
     <script>
     let planurl = 'http://www.fulek.com/VUA/SUPIT/GetNastavniPlan';

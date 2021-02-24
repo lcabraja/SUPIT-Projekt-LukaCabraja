@@ -15,9 +15,11 @@
     <!-- latest jQuery -->
     <script src="js/jquery.js"></script>
     <script src="js/jquery-ui.js"></script>
+    <!--- serif font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ballet">
 </head>
 
-<body class="backgroundimage">
+<body class="maps" style="padding-top: 0px;">
     <!-- navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -53,8 +55,8 @@
                 <div id="dialog" title="Kontaktirajte nas">
                     <form id="kontaktform" action="http://www.fulek.com/VUA/SUPIT/ContactUs">
                         <div class="form-group">
-                            <h2 class="red">Data Burger</h2>
-                            <p>Give us your data, we give you a slightly discounted burger.</p>
+                            <h2>Kontakt Obrazac</h2>
+                            <p>Kontaktirajte nas popunjavanjem obrazca</p>
                         </div>
                         <div class="input-group">
                             <label class="input-group-addon">Name </label>
@@ -74,12 +76,12 @@
                             </select>
                         </div>
                         <div class="form-group pts" style="margin-bottom: 0px;">
-                            <label for="newsletter" class="p0">Burger </label>
+                            <label for="newsletter" class="p0">Newsletter </label>
                             <input id="newsletter" name="newsletter" type="checkbox" class="p0">
                         </div>
                         <div class="form-group pts">
                             <label class="" for="message">Message </label>
-                            <textarea form="kontaktform" id="message" name="message" class="form-control" placeholder="Tell us how much you love our burgers." required></textarea>
+                            <textarea form="kontaktform" id="message" name="message" class="form-control" placeholder="Pišite poruku ovdje" required></textarea>
                         </div>
                         <div class="form-group">
                             <input id="submit" class="btn custombutton" type="submit">
@@ -90,14 +92,22 @@
         </div><!-- /.container-fluid -->
     </nav>
     <div>
-        <h1>
-            O Nama
-        </h1>
-        <div id="vrijednostidiv">
-            <h2 class="red" id="vrijednosti">
+        <div id="topimage" style="position: relative; top: 0px; left: 0px; right: 0px; height: 350px;">
+        </div>
+        <div class="container-fluid backgroundwhite">
+            <div class="container">
+                <div class="underline opacity">
+                    <h1 class="animatein">
+                        O Nama
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div id="vrijednostidiv" class="backgroundwhite" style="padding-top: 4rem;">
+            <h2 class="red backgroundwhite" id="vrijednosti">
                 Naše vrijednosti
             </h2>
-            <div class="backgroundgrey">
+            <div class="backgroundgrey customtext">
                 <div class="container">
                     <p>
                         Obećajemo pomoć u pronalasku onoga što voliš
@@ -121,9 +131,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-4 col-lg-4">
-                            <div class="panel panel-info">
+                            <div class="panel">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">
+                                    <h3 class="panel-title tl">
                                         Specijalizirano i kvalitetno
                                     </h3>
                                 </div>
@@ -143,9 +153,9 @@
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-4 col-lg-4">
-                            <div class="panel panel-info">
+                            <div class="panel nb">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">
+                                    <h3 class="panel-title tl">
                                         Izbalansirano
                                     </h3>
                                 </div>
@@ -164,9 +174,9 @@
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-4 col-lg-4">
-                            <div class="panel panel-info">
+                            <div class="panel nb">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">
+                                    <h3 class="panel-title tl">
                                         Izvrsno
                                     </h3>
                                 </div>
@@ -193,9 +203,11 @@
                 </div>
             </div>
         </div>
-        <div id="povijestdiv">
-            <h2 class="red" id="povijest">Povijest</h2>
-            <div class="backgroundgrey">
+        <div id="povijestdiv" class="backgroundwhite">
+            <h2 class="red backgroundwhite" id="povijest">
+                Povijest
+            </h2>
+            <div class="backgroundgrey customtext">
                 <div class="container">
                     <p>
                         Zajedno gradimo povijest Algebre. Počeli smo
@@ -227,6 +239,9 @@
                             <div class="panel blackborder">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">
+                                        <span class="blue">
+                                            1998. -
+                                        </span>
                                         Osnovan Algebra d.o.o. – poduzeće za obrazovanje
                                         odraslih
                                     </h3>
@@ -248,6 +263,9 @@
                             <div class="panel blackborder">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">
+                                        <span class="blue">
+                                            2000. -
+                                        </span>
                                         Microsoft Authorized Training Center (ATC)
                                     </h3>
                                 </div>
@@ -270,6 +288,9 @@
                             <div class="panel blackborder">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">
+                                        <span class="blue">
+                                            2001. -
+                                        </span>
                                         - Adobe, Macromedia i Autodesk traning ceneter
                                     </h3>
                                 </div>
@@ -290,6 +311,9 @@
                             <div class="panel blackborder">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">
+                                        <span class="blue">
+                                            2002. -
+                                        </span>
                                         Osnovano Učilište Algebra
                                     </h3>
                                 </div>
@@ -309,6 +333,9 @@
                             <div class="panel blackborder">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">
+                                        <span class="blue">
+                                            2003. -
+                                        </span>
                                         Učilište Algebra postalo vodeći ponuđač obrazovanja u IT-u
                                     </h3>
                                 </div>
@@ -329,6 +356,9 @@
                             <div class="panel blackborder">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">
+                                        <span class="blue">
+                                            2007. -
+                                        </span>
                                         Visoko učilište Algebra dobiva akreditaciju
                                     </h3>
                                 </div>
@@ -354,6 +384,9 @@
                             <div class="panel blackborder">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">
+                                        <span class="blue">
+                                            2013. -
+                                        </span>
                                         Izvrsni rezultati u europskim projektima, kvaliteta i dalje u fokusu
                                     </h3>
                                 </div>
@@ -375,6 +408,9 @@
                             <div class="panel blackborder">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">
+                                        <span class="blue">
+                                            2015. -
+                                        </span>
                                         Studij digitalnog marketinga - Ponovno pomičemo granica
                                     </h3>
                                 </div>
@@ -397,6 +433,9 @@
                             <div class="panel blackborder">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">
+                                        <span class="blue">
+                                            2016. -
+                                        </span>
                                         Pokrećemo MBA e-leadership studij – doing business in digital economy
                                     </h3>
                                 </div>
@@ -418,11 +457,11 @@
                 </div>
             </div>
         </div>
-        <div id="algebradiv">
-            <h2 class="red" id="algebra">
+        <div id="algebradiv" class="backgroundwhite">
+            <h2 class="red backgroundwhite" id="algebra">
                 Algebra Grupa
             </h2>
-            <div class="backgroundgrey">
+            <div class="backgroundgrey customtext">
                 <div class="container">
                     <p>
                         Algebra grupa je vodeći hrvatski i regionalni
@@ -451,172 +490,198 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-lg-3">
-                            <h4>
-                                EC-Council Accredited Training Center - kreditirani trening centar
-                            </h4>
+                            <div class="thumbnail nb">
+                                <h4>
+                                    EC-Council Accredited Training Center - kreditirani trening centar
+                                </h4>
+                                <img src="./images/algebra/EC-Council.png" class="mh">
+                            </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-lg-3">
-                            <h4>
-                                Cisco Networking Academy, Cisco akademija mrežnih tehnologija
-                            </h4>
+                            <div class="thumbnail nb">
+                                <h4>
+                                    Cisco Networking Academy, Cisco akademija mrežnih tehnologija
+                                </h4>
+                                <img src="./images/algebra/1024px-Cisco_academy.png" class="mh">
+                            </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-lg-3">
-                            <h4>
-                                VUE Ispitni centar za testiranje kandidata
-                            </h4>
+                            <div class="thumbnail nb">
+                                <h4>
+                                    VUE Ispitni centar za testiranje kandidata
+                                </h4>
+                                <img src="./images/algebra/VUElogo.jpg" class="mh">
+                            </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-lg-3">
-                            <h4>
-                                Autodesk trening centar za AutoCAD, Inventor i 3D Studio alate
-                            </h4>
+                            <div class="thumbnail nb">
+                                <h4>
+                                    Autodesk trening centar za AutoCAD, Inventor i 3D Studio alate
+                                </h4>
+                                <img src="./images/algebra/autodesk.png" class="mh">
+                            </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-lg-3">
-                            <h4>
-                                Adobe autorizirani trening partner za grafičke i web aplikacije
-                            </h4>
+                            <div class="thumbnail nb">
+                                <h4>
+                                    Adobe autorizirani trening partner za grafičke i web aplikacije
+                                </h4>
+                                <img src="./images/algebra/auth_training_cntr.gif" class="mh">
+                            </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-lg-3">
-                            <h4>
-                                Microsoft Gold Certified Partner for Learning Solutions
-                            </h4>
+                            <div class="thumbnail nb">
+                                <h4>
+                                    Microsoft Gold Certified Partner for Learning Solutions
+                                </h4>
+                                <img src="./images/algebra/ms_novo.png" class="mh">
+                            </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-lg-3">
-                            <h4>
-                                Red Hat Akademija – podržava nastavu i certifikacijske ispite
-                            </h4>
+                            <div class="thumbnail nb">
+                                <h4>
+                                    Red Hat Akademija – podržava nastavu i certifikacijske ispite
+                                </h4>
+                                <img src="./images/algebra/redhatLogo.png" class="mh">
+                            </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-lg-3">
-                            <h4>
-                                Oracle Approved Education Center – provedba službene Oracle edukacije
-                            </h4>
+                            <div class="thumbnail nb">
+                                <h4>
+                                    Oracle Approved Education Center – provedba službene Oracle edukacije
+                                </h4>
+                                <img src="./images/algebra/oracleLogo.png" class="mh">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="kakodonasdiv">
-                <h2 class="red" id="kakodonas">
-                    Kako do nas?
-                </h2>
-                <div id="kakodonasrows">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-6 col-lg-6" style="max-height: 100%;">
-                                <div class="panel panel-info" style="max-height: 100%;">
-                                    <div class="panel-body">
-                                        <div class="panel panel-info">
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">
-                                                    Lokacija
-                                                </h3>
-                                            </div>
-                                            <div class="panel-body">
-                                                Algebra se nalazi u okviru kampusa Hrvatskog
-                                                katoličkog sveučilišta (HKS) u Zagrebu, na
-                                                adresi Ilica 242. Ulaz u kampus smješten je
-                                                u Domobranskoj ulici. Unutar kampusa,
-                                                Algebra djeluje na dvije lokacije: u
-                                                novoobnovljenoj zgradi s početka 20.
-                                                stoljeća koja se prostire na više od 3500
-                                                četvornih metara, te na 2. katu suvremene
-                                                nove poslovne zgrade koja se nalazi u
-                                                neposrednoj blizini.
-                                            </div>
+        </div>
+        <div id="kakodonasdiv" class="mapsoverlay" style="padding-bottom: 2rem;">
+            <h2 class="red backgroundwhite" id="kakodonas">
+                Kako do nas?
+            </h2>
+            <div id="kakodonasrows" style="padding-top: 2rem;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-lg-6 container-fluid">
+                            <div class="panel panel-info container-fluid">
+                                <div class="panel-body">
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title" style="text-align: left;">
+                                                Lokacija
+                                            </h3>
                                         </div>
-                                        <div class="panel panel-info" style="margin: 0px">
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">
-                                                    Kako do nas?
-                                                </h3>
-                                            </div>
-                                            <div class="panel-body">
-                                                Algebra je smještena u zapadnom dijelu grad
-                                                Zagreba, na sto metara udaljenosti od
-                                                tramvajske stanice Sv. Duh i na15-ak km
-                                                udaljenosti od zagrebačke zračne luke.
-                                            </div>
+                                        <div class="panel-body">
+                                            Algebra se nalazi u okviru kampusa Hrvatskog
+                                            katoličkog sveučilišta (HKS) u Zagrebu, na
+                                            adresi Ilica 242. Ulaz u kampus smješten je
+                                            u Domobranskoj ulici. Unutar kampusa,
+                                            Algebra djeluje na dvije lokacije: u
+                                            novoobnovljenoj zgradi s početka 20.
+                                            stoljeća koja se prostire na više od 3500
+                                            četvornih metara, te na 2. katu suvremene
+                                            nove poslovne zgrade koja se nalazi u
+                                            neposrednoj blizini.
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-lg-6">
-                                <div class="panel panel-info">
-                                    <div class="panel-body">
-                                        <div class="panel panel-info">
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">
-                                                    Javni Prijevoz
-                                                </h3>
-                                            </div>
-                                            <div class="panel-body">
-                                                Od glavnog trga, Trga bana Jelačića,
-                                                udaljena je 6 tramvajskih stanica vožnje,
-                                                linijama 6 i 11 u smjeru Črnomerca. Od
-                                                Glavnog željezničkog kolodvora udaljena je 8
-                                                stanica vožnje tramvajskom linijom 6,
-                                                također u smjeru Črnomerca.
-                                            </div>
+                                    <div class="panel" style="margin: 0px">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title" style="text-align: left;">
+                                                Kako do nas?
+                                            </h3>
                                         </div>
-                                        <div class="panel panel-info">
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">
-                                                    Osovno Vozilo
-                                                </h3>
-                                            </div>
-                                            <div class="panel-body">
-                                                O informacije o dolasku automobilom iz
-                                                smjera Slavonska avenija dostupne su ovdje,
-                                                iz smjera Zagrebačke avenije ovdje, a iz
-                                                smjera Jadranske avenije
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-info" style="margin: 0px">
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">
-                                                    Parking
-                                                </h3>
-                                            </div>
-                                            <div class="panel-body">
-                                                Unutar kampusa posjetiteljima je na
-                                                raspolaganju otvoreni parking koji se
-                                                naplaćuje 4 kune po satu, dok se izvan
-                                                kampusa nalazi III. parkirna zona
-                                                Zagrebparkinga.
-                                            </div>
+                                        <div class="panel-body">
+                                            Algebra je smještena u zapadnom dijelu grad
+                                            Zagreba, na sto metara udaljenosti od
+                                            tramvajske stanice Sv. Duh i na15-ak km
+                                            udaljenosti od zagrebačke zračne luke.
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2780.813372133517!2d15.942731251359502!3d45.81499591788536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d6d74e265877%3A0x1a4f4eae9fc461c5!2sAlgebra%20University%20College!5e0!3m2!1sen!2sus!4v1613841059550!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <div class="col-xs-12 col-sm-6 col-lg-6">
+                            <div class="panel panel-info">
+                                <div class="panel-body">
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title" style="text-align: left;">
+                                                Javni Prijevoz
+                                            </h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            Od glavnog trga, Trga bana Jelačića,
+                                            udaljena je 6 tramvajskih stanica vožnje,
+                                            linijama 6 i 11 u smjeru Črnomerca. Od
+                                            Glavnog željezničkog kolodvora udaljena je 8
+                                            stanica vožnje tramvajskom linijom 6,
+                                            također u smjeru Črnomerca.
+                                        </div>
+                                    </div>
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title" style="text-align: left;">
+                                                Osovno Vozilo
+                                            </h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            O informacije o dolasku automobilom iz
+                                            smjera Slavonska avenija dostupne su ovdje,
+                                            iz smjera Zagrebačke avenije ovdje, a iz
+                                            smjera Jadranske avenije
+                                        </div>
+                                    </div>
+                                    <div class="panel" style="margin: 0px">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title" style="text-align: left;">
+                                                Parking
+                                            </h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            Unutar kampusa posjetiteljima je na
+                                            raspolaganju otvoreni parking koji se
+                                            naplaćuje 4 kune po satu, dok se izvan
+                                            kampusa nalazi III. parkirna zona
+                                            Zagrebparkinga.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2780.813372133517!2d15.942731251359502!3d45.81499591788536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d6d74e265877%3A0x1a4f4eae9fc461c5!2sAlgebra%20University%20College!5e0!3m2!1sen!2sus!4v1613841059550!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
-            <div id="backgrounddiv" class="container background">
-            </div>
-            <!-- popup form -->
-            <script>
-            $("#dialog").dialog({
-                autoOpen: false,
-                width: 400,
-                buttons: [{
-                    text: "Cancel",
-                    style: "display: inline-block;padding: 6px 12px;margin-bottom: 0;font-size: 14px;font-weight: 400;line-height: 1.42857143;text-align: center;white-space: nowrap;vertical-align: middle;-ms-touch-action: manipulation;touch-action: manipulation;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;background-image: none;border: 1px solid transparent;border-radius: 4px;",
-                    click: function() {
-                        $(this).dialog("close");
-                    }
-                }]
-            });
+        </div>
+        <div id="backgrounddiv" class="background" style="position: relative; bottom: 0px; left: 0px; right: 0px; height: 350px;">
+        </div>
+        <!-- popup form -->
+        <script>
+        $("#dialog").dialog({
+            autoOpen: false,
+            width: 400,
+            buttons: [{
+                text: "Cancel",
+                style: "display: inline-block;padding: 6px 12px;margin-bottom: 0;font-size: 14px;font-weight: 400;line-height: 1.42857143;text-align: center;white-space: nowrap;vertical-align: middle;-ms-touch-action: manipulation;touch-action: manipulation;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;background-image: none;border: 1px solid transparent;border-radius: 4px;",
+                click: function() {
+                    $(this).dialog("close");
+                }
+            }]
+        });
 
-            // Link to open the dialog
-            $("#dialog-link").click(function(event) {
-                $("#dialog").dialog("open");
-                event.preventDefault();
-            });
-            </script>
-            <!-- Latest compiled and minified JavaScript -->
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        // Link to open the dialog
+        $("#dialog-link").click(function(event) {
+            $("#dialog").dialog("open");
+            event.preventDefault();
+        });
+        </script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        <script src="./js/smoothscroll.js"></script>
 </body>
 
 </html>
