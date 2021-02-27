@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <h1 class="h1h1">Zaiskri</h1>
+    <p id="typeme" class="h1h1"></p>
     <div id="background">
         <video autoplay muted loop class="videocontainer">
             <source src="./video/typingOnlaptop.mp4" type="video/mp4">
@@ -89,6 +89,18 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+    <script>
+    new TypeIt("#typeme", {
+            speed: 150,
+            waitUntilVisible: true
+        })
+        .type('<span class="middle">Budi izvrstan u onome što vidiš!</span>', { delay: 1000 })
+        .delete(6)
+        .type('voliš.', { delay: 1000 })
+        .type('<br><span class="red left">ZAISKRI</span>.')
+        .go();
+    </script>
     <!-- popup form -->
     <script>
     $("#dialog").dialog({

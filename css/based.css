@@ -356,14 +356,27 @@ div.panel.blackaborder > div.panel-heading {
 }
 
 .h1h1 {
+    font-weight: 500;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 15;
-    font-size: 8rem;
+    font-size: 5rem;
     color: white;
     text-shadow: 1px 1px 1px black;
+    white-space: nowrap;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.left {
+    text-align: left;
+    z-index: 15;
+    font-size: 5rem;
+    text-shadow: 1px 1px 1px black;
+    padding-top: 2rem;
+    padding-bottom: 0px;
 }
 
 .background {
